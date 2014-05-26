@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_textview_list_model_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            android:textSize="@dimen/model_textview_name_font"
+            android:textColor="@color/bluesea"
+
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_textview_list_model_second"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="FIRST"
+                android:textSize="@dimen/model_textview_medium_font"
+                android:textColor="@color/bluesea"
+
+                />
+
+            <TextView
+                android:id="@+id/id_textview_list_model_third"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="YEAR"
+                android:textSize="@dimen/model_textview_small_font"
+                android:textColor="@color/bluesea"
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

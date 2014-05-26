@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="@dimen/global_padding_or_margin_medium"
+              android:layout_marginTop="@dimen/global_padding_or_margin_medium"
+              android:weightSum="1">
+
+    <Button
+        android:id="@+id/id_button_scan_ffnex"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/setting_button_scan_heigh"
+        android:layout_marginBottom="@dimen/global_padding_or_margin_small"
+        android:layout_marginTop="@dimen/global_padding_or_margin_small"
+        android:text="Scan FFNex"
+        android:background="@drawable/button_clickable"
+        android:textColor="@color/white"
+        android:textSize="@dimen/setting_button_scan_font"
+        />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/id_splashscreen_textview_application_name"
+        android:textSize="@dimen/splash_textview_application_name"
+        android:text="SwimLap"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_swimlap_color"/>
+
+    <TextView
+        android:id="@+id/splashscreen_textview_welcome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/global_padding_or_margin_large"
+        android:autoLink="web"
+        android:text="Welcome"
+        android:textSize="@dimen/splash_textview_welcome"
+        android:gravity="center"/>
+</RelativeLayout>

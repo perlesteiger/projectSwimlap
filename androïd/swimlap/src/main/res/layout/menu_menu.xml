@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+    >
+
+    <item
+        android:id="@+id/id_menu_goto_menu"
+        android:title="Menu"
+        android:showAsAction="always|withText"
+        />
+
+    <item
+        android:id="@+id/id_menu_goto_ranking"
+        android:title="Ranking"
+        android:showAsAction="always|withText"
+        />
+
+    <item
+        android:id="@+id/id_menu_goto_setting"
+        android:title="Settings"
+        android:showAsAction="always|withText"
+        />
+
+    <item
+        android:id="@+id/id_menu_goto_simple"
+        android:title="Simple Chronometer"
+        android:showAsAction="always|withText"
+        />
+
+    <item
+        android:id="@+id/id_menu_goto_meeting"
+        android:title="Meetings"
+        android:showAsAction="always|withText"
+        />
+
+    <item
+        android:id="@+id/id_menu_goto_swimmer"
+        android:title="Swimmers"
+        android:showAsAction="always|withText"
+        />
+</menu>

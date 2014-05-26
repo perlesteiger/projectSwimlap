@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <corners
+        android:radius="@dimen/global_radius_basic"
+        />
+    <gradient
+        android:angle="45"
+        android:centerX="35%"
+        android:startColor="@color/bluesea"
+        android:endColor="@color/bluesea"
+        android:type="linear"
+        />
+    <padding
+        android:left="@dimen/global_padding_or_margin_small"
+        android:top="@dimen/global_padding_or_margin_small"
+        android:right="@dimen/global_padding_or_margin_small"
+        android:bottom="@dimen/global_padding_or_margin_small"
+        />
+    <size
+        android:height="@dimen/title_button_goto_ranking_heigh"
+        />
+</shape>

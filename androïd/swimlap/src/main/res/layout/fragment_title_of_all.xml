@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/global_padding_or_margin_medium"
+              android:layout_marginTop="@dimen/global_padding_or_margin_medium"
+    >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        >
+
+        <ImageView
+            android:id="@+id/id_imageview_logo_swimlap"
+            android:layout_width="@dimen/title_imageview_side"
+            android:layout_height="@dimen/title_imageview_side"
+            android:src="@drawable/logo_swimlap_color"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        >
+
+        <TextView
+            android:id="@+id/id_textview_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="SwimLAp"
+            style="@style/titleContent"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:paddingTop="@dimen/global_padding_or_margin_large"
+            android:paddingBottom="@dimen/global_padding_or_margin_large"/>
+
+        />
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+
+        >
+
+        <Button
+            android:id="@+id/id_button_goto_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_button_goto_ranking_heigh"
+
+            android:background="@drawable/button_ranking_with_shadow"
+
+            android:text="Rankings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_button_goto_ranking_font"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/id_layout_lap_for_ontouchlistener"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/id_listview_lap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </ListView>
+    <TextView
+        android:id="@+id/id_textview_no_meeting_in_lap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="No meeting found today"
+        android:textColor="@color/bluesea"
+        android:visibility="invisible"
+        android:textSize="@dimen/lap_textview_no_lap"/>
+
+</LinearLayout>

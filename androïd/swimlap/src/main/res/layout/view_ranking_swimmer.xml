@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/id_ranking_textview_swimmer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bluesea"
+        android:textSize="@dimen/ranking_textview_row_swimmer_font"/>
+
+
+    <LinearLayout
+        android:id="@+id/id_ranking_layout_swimmer_tofill_with_race"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/ranking_padding_row_race"/>
+
+</LinearLayout>

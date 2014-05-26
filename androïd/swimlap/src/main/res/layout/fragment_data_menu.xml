@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_layout_fragment_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/id_button_to_simplechronometer"
+        android:layout_width="@dimen/menu_button_width"
+        android:layout_height="@dimen/menu_button_heigh"
+
+        android:background="@drawable/button_clickable"
+
+        android:text="Simple chronometer"
+        android:textSize="@dimen/menu_button_font"
+        android:textColor="@color/bluesea"
+        android:layout_below="@+id/id_button_to_settings"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/menu_margin_top_button"/>
+
+    <Button
+        android:id="@+id/id_button_to_settings"
+        android:layout_width="@dimen/menu_button_width"
+        android:layout_height="@dimen/menu_button_heigh"
+
+        android:background="@drawable/button_clickable"
+
+        android:text="Settings"
+        android:textSize="@dimen/menu_button_font"
+        android:textColor="@color/bluesea"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/id_button_to_simplechronometer"
+        android:layout_alignStart="@+id/id_button_to_simplechronometer"/>
+
+    <Button
+        android:id="@+id/id_button_to_meetings"
+        android:layout_width="@dimen/menu_button_width"
+        android:layout_height="@dimen/menu_button_heigh"
+
+        android:background="@drawable/button_clickable"
+
+        android:text="Meetings"
+        android:textSize="@dimen/menu_button_font"
+        android:textColor="@color/bluesea"
+        android:layout_marginTop="@dimen/menu_margin_top_button"
+        android:layout_below="@+id/id_button_to_simplechronometer"
+        android:layout_alignLeft="@+id/id_button_to_simplechronometer"
+        android:layout_alignStart="@+id/id_button_to_simplechronometer"/>
+
+    <Button
+        android:id="@+id/id_button_to_swimmers"
+        android:layout_width="@dimen/menu_button_width"
+        android:layout_height="@dimen/menu_button_heigh"
+
+        android:background="@drawable/button_clickable"
+
+        android:text="Swimmers"
+        android:textSize="@dimen/menu_button_font"
+        android:textColor="@color/bluesea"
+        android:layout_below="@+id/id_button_to_meetings"
+        android:layout_alignLeft="@+id/id_button_to_meetings"
+        android:layout_alignStart="@+id/id_button_to_meetings"
+        android:layout_marginTop="@dimen/menu_margin_top_button"/>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SwimLap.iml" filepath="$PROJECT_DIR$/SwimLap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swimlap/swimlap.iml" filepath="$PROJECT_DIR$/swimlap/swimlap.iml" />
+    </modules>
+  </component>
+</project>
+

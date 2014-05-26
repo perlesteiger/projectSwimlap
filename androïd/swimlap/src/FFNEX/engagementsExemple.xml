@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FFNEX type="engagement" version="1.0.16">
+    <!--origine du fichier-->
+    <ORIGIN name="extraNat Pocket" version="4.0.0">
+        <CONTACT name="Prénom NOM" zip="93508" address="14, rue Scandicci" city="Pantin Cedex"
+                 email="ffn@ffnatation.fr" internet="http://www.ffnatation.fr"
+                 phone="+33(0)1.41.83.87.70" fax="+33(0)1.41.83.87.69"/>
+    </ORIGIN>
+    <!--compétitions-->
+    <MEETS>
+        <MEET id="1234" name="Championnats de France " city="Nom dela ville" nation="FRA" typeid="5"
+              disciplineid="1" timingid="1" startdate="2012-02-01" stopdate="2012-02-02">
+            <!--clubs (clubs d'appartenance des nageurs et clubs d'engagement ou bannières)-->
+            <CLUBS>Fédération Française de Natation Spécifications du format FFNex Version 1.0.17
+                Date: 17/10/2012 Page 22 sur 49
+                <CLUB id="1592" name="Comité Régional du Centre" code="060000000" nation="FRA"
+                      typeid="1"/>
+                <CLUB id="2378" name="Club Avenir Natation" code="070512012" nation="FRA"
+                      typeid="3"/>
+                <CLUB id="1209" name="Olympic Club Natation" code="060454358" nation="FRA"
+                      typeid="3"/>
+            </CLUBS>
+            <!--participants (avec leur club d'appartenance)-->
+            <SWIMMERS>
+                <SWIMMER id="238765" firstname="Prénom" lastname="NOM" gender="M"
+                         birthdate="1979-03-10" nation="FRA" clubid="2378"/>
+                <SWIMMER id="273821" firstname="Prénom" lastname="NOM" gender="M"
+                         birthdate="1978-02-10" nation="FRA" clubid="2378"/>
+                <SWIMMER id="1009383" firstname="Prénomn" lastname="NOM" gender="M"
+                         birthdate="1979-03-10" nation="FRA" clubid="2378"/>
+                <SWIMMER id="137422" firstname="Prénom" lastname="NOM" gender="M"
+                         birthdate="1981-01-23" nation="FRA" clubid="2378"/>
+                <SWIMMER id="43221" firstname="Prénom" lastname="NOM" gender="M"
+                         birthdate="1980-05-30" nation="FRA" clubid="2378"/>
+            </SWIMMERS>
+            <!--catégories-->
+            <AGEGROUPS>
+                <!--la catégorie englobante-->
+                <AGEGROUP id="0" name="Toutes catégories" agemin="14" agemax="999"/>
+                <!--des catégories-->
+                <AGEGROUP id="4" name="Minimes" agemin="14" agemax="15"/>
+                <AGEGROUP id="1234" name="Juniors / Séniors" agemin="18" agemax="999"/>
+            </AGEGROUPS>
+            <!--engagements-->
+            <RESULTS>
+                <!--individuel-->
+                <RESULT id="2355" raceid="3" roundid="60" agegroupid="4" qualifyingplace="PARIS"
+                        qualifyingtime="1.5736" qualifyingdate="2010-08-04" swimtime="0"
+                        clubid="1592" team="1">
+                    <SOLO swimmerid="238765"/>
+                </RESULT>
+                <RESULT id="2356" roundid="60" agegroupid="0" qualifyingplace="PARIS"
+                        qualifyingtime="1.4536" swimtime="0" clubid="2378">
+                    <SOLO swimmerid="273821"/>
+                </RESULT>
+                <!--relais-->
+                <RESULT id="2357" raceid="36" roundid="60" agegroupid="0" qualifyingplace="REIMS"
+                        qualifyingtime="3.0921" swimtime="0" clubid="1209" team="2">
+                    <RELAY name="Relai 1">
+                        <RELAYPOSITIONS>
+                            <RELAYPOSITION number="1" swimmerid="273821"/>
+                            <RELAYPOSITION number="2" swimmerid="1009383"/>
+                            <RELAYPOSITION number="3" swimmerid="137422"/>
+                            <RELAYPOSITION number="4" swimmerid="43221"/>
+                        </RELAYPOSITIONS>
+                    </RELAY>
+                </RESULT>
+            </RESULTS>
+        </MEET>
+    </MEETS>
+</FFNEX>

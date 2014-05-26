@@ -1,0 +1,135 @@
+<resources>
+     <!-- GLOBAL -->
+    <dimen name="global_padding_or_margin_small">1dp</dimen>
+    <dimen name="global_padding_or_margin_medium">5dp</dimen>
+    <dimen name="global_padding_or_margin_large">10dp</dimen>
+
+    <dimen name="global_button_side_basic">75dp</dimen>
+    <dimen name="global_button_side_medium">50dp</dimen>
+    <dimen name="global_button_side_small">30dp</dimen>
+
+    <dimen name="global_button_font_basic">25dp</dimen>
+    <dimen name="global_button_font_small">15dp</dimen>
+
+    <dimen name="global_nav_button_font">20dp</dimen>
+    <dimen name="global_nav_button_heigh">25dp</dimen>
+
+
+
+    <dimen name="global_radius_basic">8dp</dimen>
+    <dimen name="global_radius_round">15dp</dimen>
+
+    <dimen name="global_border_width">1dp</dimen>
+
+
+    <!-- VIEW DIRECT -->
+    <dimen name="direct_button_side">@dimen/global_button_side_basic</dimen>
+    <dimen name="direct_button_font">@dimen/global_button_font_basic</dimen>
+    <dimen name="direct_chrono_font">50dp</dimen>
+
+    <!-- VIEW TITLE -->
+    <dimen name="title_imageview_side">60dp</dimen>
+    <dimen name="title_button_goto_ranking_heigh">40dp</dimen>
+    <dimen name="title_button_goto_ranking_font">15dp</dimen>
+    <dimen name="title_textview_font">20dp</dimen>
+
+    <!-- VIEW MENU -->
+    <dimen name="menu_button_width">200dp</dimen>
+    <dimen name="menu_button_heigh">50dp</dimen>
+    <dimen name="menu_button_font">20dp</dimen>
+    <dimen name="menu_margin_top_button">50dp</dimen>
+
+    <!-- VIEW SETTING -->
+    <dimen name="setting_button_scan_font">@dimen/global_nav_button_font</dimen>
+    <dimen name="setting_button_scan_heigh">@dimen/global_nav_button_heigh</dimen>
+    <dimen name="setting_button_save_club_width">100dp</dimen>
+    <dimen name="setting_button_save_club_heigh">45dp</dimen>
+    <dimen name="setting_button_save_club_font">@dimen/global_button_font_small</dimen>
+    <dimen name="setting_textview_club_font">25dp</dimen>
+    <dimen name="setting_textview_club_width">120dp</dimen>
+
+    <dimen name="setting_textview_other_font">18dp</dimen>
+    <dimen name="setting_textview_mention_title_font">25dp</dimen>
+    <dimen name="setting_textview_mention_text_font">12dp</dimen>
+
+    <!-- VIEW SIMPLE -->
+    <dimen name="simple_chrono_font">@dimen/direct_chrono_font</dimen>
+    <dimen name="simple_button_start_stop_font">15dp</dimen>
+    <dimen name="simple_button_start_stop_side">50dp</dimen>
+    <dimen name="simple_textview_race_name_font">20dp</dimen>
+    <dimen name="simple_button_unlap_font">@dimen/global_button_font_small</dimen>
+    <dimen name="simple_button_unlap_width">@dimen/global_button_side_small</dimen>
+    <dimen name="simple_button_lap_font">@dimen/global_button_font_basic</dimen>
+    <dimen name="simple_button_lap_heigh">@dimen/global_button_side_basic</dimen>
+    <dimen name="simple_button_lap_width">@dimen/global_button_side_basic</dimen>
+    <dimen name="simple_textview_all_laps_font">12dp</dimen>
+    <dimen name="simple_textview_all_laps_heigh">80dp</dimen>
+    <dimen name="simple_textview_last_lap_font">18dp</dimen>
+
+    <!-- VIEW RANKING -->
+    <dimen name="ranking_textview_no_ranking_font">20dp</dimen>
+    <dimen name="ranking_textview_row_meeting_font">25dp</dimen>
+    <dimen name="ranking_textview_row_swimmer_font">18dp</dimen>
+    <dimen name="ranking_padding_row_swimmer">20dp</dimen>
+    <dimen name="ranking_textview_row_race_font">15dp</dimen>
+    <dimen name="ranking_padding_row_race">40dp</dimen>
+    <dimen name="ranking_textview_row_lap_font">14dp</dimen>
+    <dimen name="ranking_padding_row_lap">45dp</dimen>
+    <dimen name="ranking_textview_row_lap_heigh">14dp</dimen>
+
+    <!-- VIEW MODEL LIST : MEETING LIST OR SWIMMER LIST -->
+    <dimen name="model_textview_no_model">20dp</dimen>
+    <dimen name="model_button_add_model_font">@dimen/global_nav_button_font</dimen>
+    <dimen name="model_button_add_model_heigh">@dimen/global_nav_button_heigh</dimen>
+    <dimen name="model_textview_name_font">20dp</dimen>
+    <dimen name="model_textview_medium_font">18dp</dimen>
+    <dimen name="model_textview_small_font">15dp</dimen>
+
+    <!-- VIEW MODEL DETAIL: MEETING DETAIL OR SWIMMER DETAIL -->
+    <dimen name="detail_button_export_font">@dimen/global_nav_button_font</dimen>
+    <dimen name="detail_textview_big_font">25dp</dimen>
+    <dimen name="detail_textview_medium_font">18dp</dimen>
+    <dimen name="detail_textview_small_font">15dp</dimen>
+
+    <!-- VIEW LAP -->
+    <!--chrono-->
+    <dimen name="lap_chrono_font">@dimen/direct_chrono_font</dimen>
+    <!--button start stop-->
+    <dimen name="lap_button_start_stop_font">15dp</dimen>
+    <dimen name="lap_button_start_stop_side">50dp</dimen>
+    <!--button nav-->
+    <dimen name="lap_button_race_font">14dp</dimen>
+    <dimen name="lap_button_race_width">140dp</dimen>
+    <dimen name="lap_button_race_heigh">45dp</dimen>
+    <!-- textview in row-->
+    <dimen name="lap_textview_race_name_font">20dp</dimen>
+    <dimen name="lap_textview_all_laps_font">12dp</dimen>
+    <dimen name="lap_textview_all_laps_heigh">80dp</dimen>
+    <dimen name="lap_textview_last_lap_font">14dp</dimen>
+
+    <dimen name="lap_layout_row">120dp</dimen>
+    <dimen name="lap_scrollview_all_laps_heigh">80dp</dimen>
+    <dimen name="lap_textview_in_row">20dp</dimen>
+
+
+
+    <!--button in row-->
+    <dimen name="lap_button_unlap_font">@dimen/global_button_font_small</dimen>
+    <dimen name="lap_button_unlap_width">50dp</dimen>
+    <dimen name="lap_button_unlap_heigh">50dp</dimen>
+    <dimen name="lap_button_lap_font">@dimen/global_button_font_basic</dimen>
+    <dimen name="lap_button_lap_heigh">@dimen/global_button_side_basic</dimen>
+    <dimen name="lap_button_lap_width">100dp</dimen>
+    <dimen name="lap_button_rec_or_res_side">@dimen/global_button_side_medium</dimen>
+    <dimen name="lap_button_rec_or_res_font">@dimen/global_button_font_small</dimen>
+
+    <!--no lap-->
+    <dimen name="lap_textview_no_lap">20dp</dimen>
+
+
+    <!-- SPLASHSCREEN -->
+    <dimen name="splash_textview_application_name">50dp</dimen>
+    <dimen name="splash_textview_welcome">30dp</dimen>
+
+
+</resources>
