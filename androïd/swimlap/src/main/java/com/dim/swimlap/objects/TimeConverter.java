@@ -28,8 +28,11 @@ public class TimeConverter {
     }
 
     public String makeForFFNex(float timeInMilli) {
-        float milliSec = (int) timeInMilli % 1000;
-        float hundredtSec = Math.round(milliSec / 10);
+        int milliSec = (int) timeInMilli % 1000;
+        String milliInString = String.valueOf(milliSec);
+        milliInString += "00";
+        milliInString = milliInString.substring(0, 2);
+        float hundredtSec = Float.valueOf(milliInString);
 
         float secondsTotal = (int) (timeInMilli - milliSec) / 1000;
         float seconds = secondsTotal % 60;
@@ -39,9 +42,9 @@ public class TimeConverter {
 
         String toReturn = String.valueOf(timeFFNex);
         toReturn += "0000";
-        if(minutes>9){
+        if (minutes > 9) {
             toReturn = toReturn.substring(0, 7);
-        }else{
+        } else {
             toReturn = toReturn.substring(0, 6);
         }
         return toReturn;
