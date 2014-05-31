@@ -2,6 +2,61 @@ $(document).ready ( function () {
    
     $("header span").find(".active").removeClass("active");
     
+    //si changement de competition, recuperer nageur et race approprie
+    $('.search_competition').change ( function() {
+       var id = $(this).val();
+
+       //recuperation swimmer
+       $.post( "../model/fonctions_requestSwimmerAndRace_byMeeting.php", { id_meeting: id, type: 'swimmer' }, function(data) {
+           //Si le php renvoie quelque chose
+           var swimmers=$.parseJSON(data);
+           
+           var i=0;           
+           $('.search_swimmer').html('');
+           
+           //option tous
+           var option = $('<option/>');
+            option.val('');
+            option.text('Tous');
+            option.appendTo('.search_swimmer');
+            
+           //option les nageurs
+           while (i < swimmers.length) {
+               var option = $('<option/>');
+               option.val(swimmers[i].swimmer_id);
+               option.text(swimmers[i].swimmer);
+               option.appendTo('.search_swimmer');
+               
+               i++;
+           }
+       });
+       
+       //recuperation race
+       $.post( "../model/fonctions_requestSwimmerAndRace_byMeeting.php", { id_meeting: id, type: 'race' }, function(data) {
+           //Si le php renvoie quelque chose
+           var races=$.parseJSON(data);
+           
+           var i=0;           
+           $('.search_race').html('');
+           
+           //option tous
+           var option = $('<option/>');
+            option.val('');
+            option.text('Toutes');
+            option.appendTo('.search_race');
+            
+           //option les nageurs
+           while (i < races.length) {
+               var option = $('<option/>');
+               option.val(races[i].race_id);
+               option.text(races[i].race);
+               option.appendTo('.search_race');
+               
+               i++;
+           }
+       });
+    });
+    
     //changer le contenu des parametres
     $("#sous-menu-setting li").click( function() {
        var id = $(this).attr('class');
@@ -27,13 +82,172 @@ $(document).ready ( function () {
        
        switch (id) {
             case 'repartition':
+                //possibilite changement competition
+                $('.search_competition').removeAttr('disabled');
                 createRepartition(swimmer,meeting,race,season);
+                
+                //remettre tous les nageurs et les races pa rapport a la competition
+                //recuperation swimmer
+                $.post( "../model/fonctions_requestSwimmerAndRace_byMeeting.php", { id_meeting: meeting, type: 'swimmer' }, function(data) {
+                    //Si le php renvoie quelque chose
+                    var swimmers=$.parseJSON(data);
+
+                    var i=0;           
+                    $('.search_swimmer').html('');
+
+                    //option tous
+                    var option = $('<option/>');
+                     option.val('');
+                     option.text('Tous');
+                     option.appendTo('.search_swimmer');
+
+                    //option les nageurs
+                    while (i < swimmers.length) {
+                        var option = $('<option/>');
+                        option.val(swimmers[i].swimmer_id);
+                        option.text(swimmers[i].swimmer);
+                        option.appendTo('.search_swimmer');
+
+                        i++;
+                    }
+                });
+
+                //recuperation race
+                $.post( "../model/fonctions_requestSwimmerAndRace_byMeeting.php", { id_meeting: meeting, type: 'race' }, function(data) {
+                    //Si le php renvoie quelque chose
+                    var races=$.parseJSON(data);
+
+                    var i=0;           
+                    $('.search_race').html('');
+
+                    //option tous
+                    var option = $('<option/>');
+                     option.val('');
+                     option.text('Toutes');
+                     option.appendTo('.search_race');
+
+                    //option les nageurs
+                    while (i < races.length) {
+                        var option = $('<option/>');
+                        option.val(races[i].race_id);
+                        option.text(races[i].race);
+                        option.appendTo('.search_race');
+
+                        i++;
+                    }
+                });
                 break;
             case 'performance':
+                //possibilite changement competition
+                $('.search_competition').removeAttr('disabled');
                 createPerformance(swimmer,meeting,race,season);
+                
+                //remettre tous les nageurs et les races par rapport a la competition
+                //recuperation swimmer
+                $.post( "../model/fonctions_requestSwimmerAndRace_byMeeting.php", { id_meeting: meeting, type: 'swimmer' }, function(data) {
+                    //Si le php renvoie quelque chose
+                    var swimmers=$.parseJSON(data);
+
+                    var i=0;           
+                    $('.search_swimmer').html('');
+
+                    //option tous
+                    var option = $('<option/>');
+                     option.val('');
+                     option.text('Tous');
+                     option.appendTo('.search_swimmer');
+
+                    //option les nageurs
+                    while (i < swimmers.length) {
+                        var option = $('<option/>');
+                        option.val(swimmers[i].swimmer_id);
+                        option.text(swimmers[i].swimmer);
+                        option.appendTo('.search_swimmer');
+
+                        i++;
+                    }
+                });
+
+                //recuperation race
+                $.post( "../model/fonctions_requestSwimmerAndRace_byMeeting.php", { id_meeting: meeting, type: 'race' }, function(data) {
+                    //Si le php renvoie quelque chose
+                    var races=$.parseJSON(data);
+
+                    var i=0;           
+                    $('.search_race').html('');
+
+                    //option tous
+                    var option = $('<option/>');
+                     option.val('');
+                     option.text('Toutes');
+                     option.appendTo('.search_race');
+
+                    //option les nageurs
+                    while (i < races.length) {
+                        var option = $('<option/>');
+                        option.val(races[i].race_id);
+                        option.text(races[i].race);
+                        option.appendTo('.search_race');
+
+                        i++;
+                    }
+                });
                 break;
             case 'planning':
+                //impossible changement competition
+                $('.search_competition').prop('disabled', 'disabled');
                 createPlanification(swimmer,race,season);
+                
+                //remettre tous les nageurs et les races
+                //recuperation swimmer
+                $.post( "../model/fonctions_requestSwimmerAndRace_byMeeting.php", { type: 'swimmer' }, function(data) {
+                    //Si le php renvoie quelque chose
+                    var swimmers=$.parseJSON(data);
+
+                    var i=0;           
+                    $('.search_swimmer').html('');
+
+                    //option tous
+                    var option = $('<option/>');
+                     option.val('');
+                     option.text('Tous');
+                     option.appendTo('.search_swimmer');
+
+                    //option les nageurs
+                    while (i < swimmers.length) {
+                        var option = $('<option/>');
+                        option.val(swimmers[i].swimmer_id);
+                        option.text(swimmers[i].swimmer);
+                        option.appendTo('.search_swimmer');
+
+                        i++;
+                    }
+                });
+
+                //recuperation race
+                $.post( "../model/fonctions_requestSwimmerAndRace_byMeeting.php", { type: 'race' }, function(data) {
+                    //Si le php renvoie quelque chose
+                    var races=$.parseJSON(data);
+
+                    var i=0;           
+                    $('.search_race').html('');
+
+                    //option tous
+                    var option = $('<option/>');
+                     option.val('');
+                     option.text('Toutes');
+                     option.appendTo('.search_race');
+
+                    //option les nageurs
+                    while (i < races.length) {
+                        var option = $('<option/>');
+                        option.val(races[i].race_id);
+                        option.text(races[i].race);
+                        option.appendTo('.search_race');
+
+                        i++;
+                    }
+                });
                 break;
        }
 
@@ -149,7 +363,7 @@ function createRepartition(nageur,compet,course,saison) {
         url: '../model/fonctions_request_stat.php', //On va chercher le fichier php
         data: "style=repartition&nageur="+nageur+"&compet="+compet+"&course="+course+"&saison="+saison, //On transmet les deux données pour l'exécution de la requête
         success: function(data) { 
-
+            
             //Si le php renvoie quelque chose
             var tab=$.parseJSON(data);
 
@@ -173,7 +387,7 @@ function createRepartition(nageur,compet,course,saison) {
                 //initialisation de toutes les variables necessaires
                 var i=0;
                 var div; var divTitle; var divContent;
-                var swim; var roun; var rac; 
+                var swim; var roun; var rac; var rac_id;
                 var chaine_data = new Object(); var total = new Array();
 
                 while (i < tab.length) {
@@ -222,6 +436,7 @@ function createRepartition(nageur,compet,course,saison) {
                                         //changement de round et vidage tableau
                                         roun = tab[i].round;
                                         total = [];
+
                                         //remplissage objet et tableau objet
                                         chaine_data = {label:roun,value:tab[i].percent};
                                         total.push(chaine_data);
@@ -270,6 +485,7 @@ function createRepartition(nageur,compet,course,saison) {
 
                                 //vidage tableau/remplissage objet et tableau objet
                                 total =[];
+
                                 chaine_data = {label:roun,value:tab[i].percent};
                                 total.push(chaine_data);
 
@@ -297,6 +513,7 @@ function createRepartition(nageur,compet,course,saison) {
                         if (i===0) {
                             //variable nageur et round
                             rac = tab[i].race;
+                            rac_id = tab[i].race_id;
                             roun = tab[i].round;
 
                             //div necessaire
@@ -312,36 +529,62 @@ function createRepartition(nageur,compet,course,saison) {
                             //remplissage objet et tableau objet
                             chaine_data = {label:roun,value:tab[i].percent};
                             total.push(chaine_data);
+
                         } else {
-                            //si toujours meme nageur
+                            //si toujours meme course
                             if (rac === tab[i].race) {
-                                    //si meme round
-                                    if (roun === tab[i].round) {
-                                        //remplissage objet et tableau objet
-                                        chaine_data = {label:roun,value:tab[i].percent};
-                                        total.push(chaine_data);
-                                    //si round different
+                                    //meme race meme id
+                                    if (rac_id === tab[i].race_id) {
+                                        //si meme round
+                                        if (roun === tab[i].round) {                                      
+                                            //remplissage objet et tableau objet
+                                            chaine_data = {label:roun,value:tab[i].percent};
+                                            total.push(chaine_data);                                     
+                                        //si round different
+                                        } else {
+                                            //creation donut
+                                            var divDonut= $('<div id="donut-'+i+'" class="donuts"/>');
+                                            divDonut.appendTo(divContent);                              
+
+                                            Morris.Donut({
+                                              element: 'donut-'+i,
+                                              data: total,
+                                              colors: ['#FFF'],
+                                              formatter: function (y) {  return y + '%' }
+                                            });
+
+                                            //changement de round et vidage tableau
+                                            roun = tab[i].round;
+                                            total = [];
+
+                                            //remplissage objet et tableau objet
+                                            chaine_data = {label:roun,value:tab[i].percent};
+                                            total.push(chaine_data);
+                                        }
+                                    //meme race id different
                                     } else {
                                         //creation donut
-                                        var divDonut= $('<div id="donut-'+i+'" class="donuts"/>');
-                                        divDonut.appendTo(divContent);                              
+                                            var divDonut= $('<div id="donut-'+i+'" class="donuts"/>');
+                                            divDonut.appendTo(divContent);                              
 
-                                        Morris.Donut({
-                                          element: 'donut-'+i,
-                                          data: total,
-                                          colors: ['#FFF'],
-                                          formatter: function (y) {  return y + '%' }
-                                        });
+                                            Morris.Donut({
+                                              element: 'donut-'+i,
+                                              data: total,
+                                              colors: ['#FFF'],
+                                              formatter: function (y) {  return y + '%' }
+                                            });
 
-                                        //changement de round et vidage tableau
-                                        roun = tab[i].round;
-                                        total = [];
-                                        //remplissage objet et tableau objet
-                                        chaine_data = {label:roun,value:tab[i].percent};
-                                        total.push(chaine_data);
-                                    }
+                                            //changement de round et vidage tableau
+                                            roun = tab[i].round;
+                                            total = [];
+                                            rac_id = tab[i].race_id
 
-                                    //si dernier tour
+                                            //remplissage objet et tableau objet
+                                            chaine_data = {label:roun,value:tab[i].percent};
+                                            total.push(chaine_data);
+                                    }                                  
+
+                                   //si dernier tour
                                     if (i === (tab.length-1)) {
                                         //creation donut
                                         var divDonut= $('<div id="donut-'+i+'" class="donuts"/>');
@@ -370,6 +613,7 @@ function createRepartition(nageur,compet,course,saison) {
 
                                 //variable nageur et round
                                 rac = tab[i].race;
+                                rac_id = tab[i].race_id;
                                 roun = tab[i].round;
 
                                 //div necessaire
@@ -384,6 +628,7 @@ function createRepartition(nageur,compet,course,saison) {
 
                                 //vidage tableau/remplissage objet et tableau objet
                                 total =[];
+
                                 chaine_data = {label:roun,value:tab[i].percent};
                                 total.push(chaine_data);
 
@@ -422,9 +667,10 @@ function createPerformance(nageur,compet,course,saison) {
         url: '../model/fonctions_request_stat.php', //On va chercher le fichier php
         data: "style=performance&nageur="+nageur+"&compet="+compet+"&course="+course+"&saison="+saison, //On transmet les deux données pour l'exécution de la requête
         success: function(data) { 
+
             //Si le php renvoie quelque chose
             var tab=$.parseJSON(data);
-            
+          
             //verification contenu
             if (!tab)
                 $('#pb-performance').text("La recherche n'a pas abouti");
@@ -566,6 +812,20 @@ function createPerformance(nageur,compet,course,saison) {
 
                             //remplissage nbr pourcent
                             chaine_data = tab[i].percent+' %';
+                            
+                            //si dernier tour
+                            if (i === (tab.length-1)) {
+                                //creation pourcentage
+                                var divPourc= $('<div id="repart-'+i+'" class="reparts"/>');
+                                divPourc.appendTo(divContent);                              
+
+                                var divText= $('<div class="graph-text"/>');
+                                var divSousText= $('<p/>');
+                                divText.text(chaine_data).appendTo(divPourc);
+                                divSousText.text(roun).appendTo(divPourc);
+                                divPourc.appendTo(divContent);
+
+                            }
                         } else {
                             //si toujours meme race
                             if (rac === tab[i].race) {
